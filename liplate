@@ -1,0 +1,831 @@
+license@license-VirtualBox:~$ cd license/liplate
+license@license-VirtualBox:~/license/liplate$ virtualenv -p python3 liplate-venvAlready using interpreter /usr/bin/python3
+Using base prefix '/usr'
+New python executable in /home/license/license/liplate/liplate-venv/bin/python3
+Also creating executable in /home/license/license/liplate/liplate-venv/bin/python
+Installing setuptools, pip, wheel...done.
+license@license-VirtualBox:~/license/liplate$ source liplate-venv/bin/activate(liplate-venv) license@license-VirtualBox:~/license/liplate$ python main.py
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    from modules.file_utils import *;
+  File "/home/license/license/liplate/modules/file_utils.py", line 1, in <module>
+    import cv2;
+ImportError: No module named 'cv2'
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ pip -V
+pip 9.0.2 from /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages (python 3.5)
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ pip install opencv-python
+Collecting opencv-python
+  Downloading opencv_python-3.4.0.12-cp35-cp35m-manylinux1_x86_64.whl (24.9MB)
+    100% |████████████████████████████████| 24.9MB 51kB/s 
+Collecting numpy>=1.11.1 (from opencv-python)
+  Downloading numpy-1.14.2-cp35-cp35m-manylinux1_x86_64.whl (12.1MB)
+    100% |████████████████████████████████| 12.1MB 74kB/s 
+Installing collected packages: numpy, opencv-python
+Successfully installed numpy-1.14.2 opencv-python-3.4.0.12
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ python main.py
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    from modules.file_utils import *;
+  File "/home/license/license/liplate/modules/file_utils.py", line 3, in <module>
+    from modules.Plate import *;
+  File "/home/license/license/liplate/modules/Plate.py", line 4, in <module>
+    import pytesseract as tes;
+ImportError: No module named 'pytesseract'
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ pip install pytesseract
+Collecting pytesseract
+  Downloading pytesseract-0.2.0.tar.gz (154kB)
+    100% |████████████████████████████████| 163kB 289kB/s 
+Collecting Pillow (from pytesseract)
+  Downloading Pillow-5.0.0-cp35-cp35m-manylinux1_x86_64.whl (5.9MB)
+    100% |████████████████████████████████| 5.9MB 113kB/s 
+Building wheels for collected packages: pytesseract
+  Running setup.py bdist_wheel for pytesseract ... done
+  Stored in directory: /home/license/.cache/pip/wheels/30/cb/34/3596880eb7e3a340011ec931d540dc7c944a30d94bb3ba3af7
+Successfully built pytesseract
+Installing collected packages: Pillow, pytesseract
+Successfully installed Pillow-5.0.0 pytesseract-0.2.0
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ python main.pyTraceback (most recent call last):
+  File "main.py", line 1, in <module>
+    from modules.file_utils import *;
+  File "/home/license/license/liplate/modules/file_utils.py", line 3, in <module>
+    from modules.Plate import *;
+  File "/home/license/license/liplate/modules/Plate.py", line 7, in <module>
+    from matplotlib import pyplot as plt;
+ImportError: No module named 'matplotlib'
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ pip install matplotlib
+Collecting matplotlib
+  Downloading matplotlib-2.2.2-cp35-cp35m-manylinux1_x86_64.whl (12.6MB)
+    100% |████████████████████████████████| 12.6MB 73kB/s 
+Collecting kiwisolver>=1.0.1 (from matplotlib)
+  Downloading kiwisolver-1.0.1-cp35-cp35m-manylinux1_x86_64.whl (949kB)
+    100% |████████████████████████████████| 952kB 142kB/s 
+Collecting pytz (from matplotlib)
+  Downloading pytz-2018.3-py2.py3-none-any.whl (509kB)
+    100% |████████████████████████████████| 512kB 152kB/s 
+Collecting python-dateutil>=2.1 (from matplotlib)
+  Downloading python_dateutil-2.7.0-py2.py3-none-any.whl (207kB)
+    100% |████████████████████████████████| 215kB 219kB/s 
+Collecting six>=1.10 (from matplotlib)
+  Downloading six-1.11.0-py2.py3-none-any.whl
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 (from matplotlib)
+  Downloading pyparsing-2.2.0-py2.py3-none-any.whl (56kB)
+    100% |████████████████████████████████| 61kB 239kB/s 
+Requirement already satisfied: numpy>=1.7.1 in ./liplate-venv/lib/python3.5/site-packages (from matplotlib)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.10.0-py2.py3-none-any.whl
+Requirement already satisfied: setuptools in ./liplate-venv/lib/python3.5/site-packages (from kiwisolver>=1.0.1->matplotlib)
+Installing collected packages: kiwisolver, pytz, six, python-dateutil, pyparsing, cycler, matplotlib
+Successfully installed cycler-0.10.0 kiwisolver-1.0.1 matplotlib-2.2.2 pyparsing-2.2.0 python-dateutil-2.7.0 pytz-2018.3 six-1.11.0
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ python main.py2018-03-20 03:06:25,412 DEBUG $HOME=/home/license
+2018-03-20 03:06:25,413 DEBUG matplotlib data path /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data
+2018-03-20 03:06:25,419 DEBUG loaded rc file /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-03-20 03:06:25,421 DEBUG matplotlib version 2.2.2
+2018-03-20 03:06:25,421 DEBUG interactive is False
+2018-03-20 03:06:25,422 DEBUG platform is linux
+2018-03-20 03:06:25,422 DEBUG loaded modules: ['PIL', '_functools', 'matplotlib', 'modules.file_utils', 'base64', 'shlex', 'cython_runtime', 'io', 'distutils.version', 'logging.handlers', '_json', 'numpy._distributor_init', 'ipaddress', 'numpy.compat._inspect', 'ssl', 'modules.TrainingCharacter', 'cv2.fisheye', 'uu', 'numpy.lib._datasource', 'numpy.core.machar', 'encodings.latin_1', 'email.feedparser', 'builtins', 'numpy.core.function_base', 'json.encoder', 'numpy.compat', 'modules.Plate', 'queue', 'numpy.core', 'importlib.util', '_posixsubprocess', 'importlib._bootstrap', 'numpy.matrixlib', 'os', 'encodings.utf_8', 'mpl_toolkits', 'distutils.log', 'dis', '_weakref', 'importlib.machinery', 'itertools', 'distutils.sysconfig', 'sitecustomize', 'numpy.linalg.lapack_lite', 'email._policybase', 'copy', 'bisect', '_opcode', 'email._parseaddr', 'numpy.random.mtrand', 'numpy.lib.shape_base', 'numpy.fft.fftpack', 'numpy.testing.nose_tools.utils', 'decimal', 'numpy.random', 'urllib.error', 'email', 'numpy.lib.ufunclike', 'matplotlib.compat', 'numpy.core.numerictypes', 'cv2.ogl', 'numpy.lib.stride_tricks', '_struct', 'email.header', 'socket', 'os.path', 'six.moves.urllib', 'numpy.lib', 'tokenize', 'site', 'unittest.main', 'numpy.testing', '_sre', 'tempfile', 'enum', '_bisect', 'traceback', 'numpy.fft', 'numpy.core.einsumfunc', 'keyword', 'binascii', 'logging.config', 'numpy.linalg', 'numpy.compat.py3k', 'numpy.lib.arraysetops', 'matplotlib.cbook.deprecation', 'numpy.testing.decorators', 'unittest.suite', '_stat', '_weakrefset', 'json.scanner', 'cv2.instr', 'email.utils', 'numpy.polynomial.hermite', '_decimal', 'distutils.dep_util', 'mtrand', 'contextlib', 'http', 'numpy.testing.nosetester', 'errno', 'numpy.lib.mixins', 'posix', 'genericpath', 'numpy.ma.extras', 'PIL.Image', 'bz2', 'sre_constants', 'numpy.core.fromnumeric', 'numpy.core.numeric', 'types', 'matplotlib.fontconfig_pattern', 'numpy.core.umath', 'selectors', 'numpy.lib.info', '__main__', '__future__', 'random', '_datetime', 'numpy.lib.financial', 'unittest.signals', 'copyreg', 'imp', 'pwd', 'unittest.util', 'textwrap', 'numpy.version', 're', 'sre_compile', 'matplotlib.compat.subprocess', 'six.moves.urllib.request', 'numpy.lib._iotools', 'numpy.core.getlimits', 'distutils.spawn', 'numpy.linalg._umath_linalg', 'numpy.fft.fftpack_lite', 'subprocess', 'collections.abc', 'fnmatch', 'numpy.matrixlib.defmatrix', 'numpy.core.multiarray', 'opcode', 'cv2.dnn', 'abc', 'posixpath', 'shutil', 'urllib.request', '_ssl', 'ctypes._endian', 'numpy.core.shape_base', 'email.quoprimime', '_frozen_importlib', 'distutils.util', 'inspect', 'pkgutil', 'signal', 'email.iterators', 'numpy.polynomial.hermite_e', 'lzma', 'unittest.loader', '_locale', 'urllib.parse', 'warnings', 'numpy.lib._version', 'numpy.polynomial.polyutils', '_bootlocale', 'ntpath', 'numpy.lib.npyio', 'numpy.ma.core', 'numpy.lib.scimath', 'numpy.testing.nose_tools.nosetester', 'cv2.ml', 'numpy.lib.arrayterator', '_collections', 'numpy.ctypeslib', 'distutils.debug', 'cv2.flann', 'PIL._binary', 'numpy._import_tools', 'PIL.ImageMode', 'numpy.core.defchararray', 'stat', 'numpy.polynomial', '_random', '_collections_abc', 'atexit', 'math', 'weakref', 'numpy.testing.nose_tools', 'PIL._util', 'select', 'codecs', 'dateutil._version', 'quopri', 'urllib', '_virtualenv_distutils', 'difflib', 'locale', 'operator', 'numpy.random.info', 'pprint', 'numpy.polynomial.legendre', 'string', 'importlib.abc', 'six.moves', 'numpy.linalg.linalg', 'numpy.core.info', 'encodings', '_operator', 'numpy.core._internal', 'numpy.polynomial._polybase', 'numpy.lib.function_base', 'calendar', 'numpy.core.records', 'numpy.fft.info', 'importlib', 'ast', 'email.message', 'email.encoders', 'unittest.case', '_compat_pickle', 'matplotlib.colors', 'numpy.lib.index_tricks', 'numpy.ma', 'datetime', 'matplotlib.cbook._backports', 'pathlib', 'glob', 'linecache', 'email._encoded_words', 'zlib', 'email.charset', 'distutils.dist', 'numpy.core.arrayprint', 'pickle', 'email.base64mime', 'token', '_warnings', 'cv2.videostab', 'numpy.lib.nanfunctions', 'numpy._globals', '_string', 'gettext', 'numpy.lib.utils', 'numpy.polynomial.polynomial', 'distutils', 'cv2.cv2', 'numpy.lib.type_check', 'numpy.lib.format', 'logging', 'cv2.ocl', 'threading', 'configparser', 'cv2.detail', 'reprlib', 'distutils.errors', '_lzma', 'functools', 'distutils.fancy_getopt', '_frozen_importlib_external', 'numpy', 'numpy.polynomial.chebyshev', 'gzip', '_hashlib', 'struct', '_codecs', 'modules', 'numpy.lib.twodim_base', 'matplotlib.testing', '_thread', 'pytesseract', 'cv2.ipp', '_signal', '_socket', 'heapq', 'ctypes', '_heapq', 'json', 'numpy.lib.polynomial', 'email.parser', 'socketserver', 'numpy.testing.nose_tools.decorators', '_bz2', 'numpy.__config__', 'cycler', 'marshal', 'hashlib', 'numpy.core.memmap', 'json.decoder', 'getopt', 'email.errors', 'sre_parse', 'unittest.runner', 'tarfile', 'unittest', 'PIL.version', 'pytesseract.pytesseract', 'collections', 'PIL._imaging', 'matplotlib._color_data', 'six', '_pickle', 'numpy.linalg.info', '_io', 'grp', 'cv2', 'time', 'argparse', 'matplotlib.cbook', 'dateutil', 'cv2.data', 'numpy.core._methods', 'numpy.add_newdocs', 'zipimport', 'importlib._bootstrap_external', 'numpy.testing.utils', 'cv2.Error', 'numpy.lib.arraypad', 'encodings.aliases', 'numbers', 'matplotlib._version', 'http.client', 'numpy.fft.helper', '_compression', '_imp', 'matplotlib.rcsetup', 'sys', 'urllib.response', '_ast', 'numpy.polynomial.laguerre', '_ctypes', 'pyparsing', 'unittest.result']
+2018-03-20 03:06:25,531 DEBUG CACHEDIR=/home/license/.cache/matplotlib
+2018-03-20 03:06:25,534 INFO font search path ['/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf', '/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm', '/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts']
+2018-03-20 03:06:25,669 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf
+2018-03-20 03:06:25,669 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf
+2018-03-20 03:06:25,670 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf
+2018-03-20 03:06:25,672 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf
+2018-03-20 03:06:25,673 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf
+2018-03-20 03:06:25,673 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf
+2018-03-20 03:06:25,673 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf
+2018-03-20 03:06:25,673 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf
+2018-03-20 03:06:25,673 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf
+2018-03-20 03:06:25,673 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf
+2018-03-20 03:06:25,676 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /usr/share/fonts/truetype/fonts-guru-extra/Saab.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Sawasdee-Oblique.ttf
+2018-03-20 03:06:25,677 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Sawasdee-BoldOblique.ttf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/truetype/kacst-one/KacstOne-Bold.ttf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsD-Bold.otf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeTwoSym-Regular.otf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeFourSym-Bold.otf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypewriter.ttf
+2018-03-20 03:06:25,678 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Garuda-Bold.ttf
+2018-03-20 03:06:25,679 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsSm-Bold.otf
+2018-03-20 03:06:25,679 DEBUG trying fontname /usr/share/fonts/truetype/padauk/Padauk-book.ttf
+2018-03-20 03:06:25,679 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstLetter.ttf
+2018-03-20 03:06:25,679 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeOneSym-Bold.otf
+2018-03-20 03:06:25,688 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Laksaman-BoldItalic.ttf
+2018-03-20 03:06:25,688 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+2018-03-20 03:06:25,688 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXGeneral-Italic.otf
+2018-03-20 03:06:25,688 DEBUG trying fontname /usr/share/fonts/opentype/stix-word/STIXMath-Regular.otf
+2018-03-20 03:06:25,688 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Loma-Bold.ttf
+2018-03-20 03:06:25,688 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-M.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypist-Oblique.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstNaskh.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsUp-Bold.otf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-R.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf
+2018-03-20 03:06:25,689 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Umpush-Bold.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstDigital.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypewriter-Bold.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/nanum/NanumBarunGothicBold.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-C.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-B.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstArt.ttf
+2018-03-20 03:06:25,690 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstOffice.ttf
+2018-03-20 03:06:25,691 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstPen.ttf
+2018-03-20 03:06:25,691 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Laksaman-Bold.ttf
+2018-03-20 03:06:25,691 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSans.ttf
+2018-03-20 03:06:25,691 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Garuda.ttf
+2018-03-20 03:06:25,692 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Norasi-Oblique.ttf
+2018-03-20 03:06:25,692 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Kinnari-BoldOblique.ttf
+2018-03-20 03:06:25,692 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSansNarrow-BoldItalic.ttf
+2018-03-20 03:06:25,692 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Waree-BoldOblique.ttf
+2018-03-20 03:06:25,692 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgMono.ttf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Sawasdee-Bold.ttf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXGeneral-Bold.otf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeThreeSym-Bold.otf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/opentype/stix-word/STIX-BoldItalic.otf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/truetype/takao-gothic/TakaoPGothic.ttf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Regular.ttf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/truetype/lao/Phetsarath_OT.ttf
+2018-03-20 03:06:25,693 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXVariants-Bold.otf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXNonUnicode-Regular.otf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Kinnari-Bold.ttf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/opentype/stix-word/STIX-Regular.otf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeMono.ttf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-MI.ttf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Garuda-Oblique.ttf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Norasi.ttf
+2018-03-20 03:06:25,694 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf
+2018-03-20 03:06:25,695 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeThreeSym-Regular.otf
+2018-03-20 03:06:25,698 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-LI.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Umpush-LightOblique.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstPoster.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypo-Bold.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypo-Oblique.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypist-BoldOblique.ttf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsSm-Regular.otf
+2018-03-20 03:06:25,699 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypist.ttf
+2018-03-20 03:06:25,700 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Purisa-Bold.ttf
+2018-03-20 03:06:25,700 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Sawasdee.ttf
+2018-03-20 03:06:25,700 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Norasi-Italic.ttf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsUpD-Bold.otf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsD-Regular.otf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/truetype/lohit-punjabi/Lohit-Punjabi.ttf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/truetype/nanum/NanumGothicBold.ttf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Kinnari-Italic.ttf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+2018-03-20 03:06:25,702 DEBUG trying fontname /usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstQurn.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/opentype/stix-word/STIX-Italic.otf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeOneSym-Regular.otf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-RI.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf
+2018-03-20 03:06:25,703 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Kinnari-Oblique.ttf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstDecorative.ttf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Waree-Bold.ttf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-B.ttf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXVariants-Regular.otf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Purisa.ttf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXNonUnicode-BoldItalic.otf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf
+2018-03-20 03:06:25,704 DEBUG trying fontname /usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+2018-03-20 03:06:25,708 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+2018-03-20 03:06:25,708 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeFourSym-Regular.otf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstFarsi.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-BI.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstBook.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsUp-Regular.otf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Norasi-BoldOblique.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Loma-BoldOblique.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/kacst-one/KacstOne.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Laksaman.ttf
+2018-03-20 03:06:25,709 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-L.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXNonUnicode-Italic.otf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypewriter-BoldOblique.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/padauk/Padauk-bold.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypewriter-Oblique.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Umpush-BoldOblique.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Laksaman-Italic.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Umpush-Light.ttf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeFiveSym-Regular.otf
+2018-03-20 03:06:25,710 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-BI.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Waree.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgMono-Oblique.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/openoffice/opens___.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgMono-Bold.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Loma.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/tibetan-machine/TibetanMachineUni.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsUpD-Regular.otf
+2018-03-20 03:06:25,711 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Umpush-Oblique.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/ancient-scripts/Symbola_hint.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstScreen.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+2018-03-20 03:06:25,712 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypist-Bold.ttf
+2018-03-20 03:06:25,713 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Garuda-BoldOblique.ttf
+2018-03-20 03:06:25,713 DEBUG trying fontname /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-RI.ttf
+2018-03-20 03:06:25,713 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsUpSm-Bold.otf
+2018-03-20 03:06:25,714 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+2018-03-20 03:06:25,714 DEBUG trying fontname /usr/share/fonts/truetype/ttf-khmeros-core/KhmerOS.ttf
+2018-03-20 03:06:25,714 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypo-BoldOblique.ttf
+2018-03-20 03:06:25,714 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXIntegralsUpSm-Regular.otf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Purisa-BoldOblique.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/abyssinica/AbyssinicaSIL-R.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/padauk/Padauk-bookbold.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Norasi-BoldItalic.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeSerif.ttf
+2018-03-20 03:06:25,715 DEBUG trying fontname /usr/share/fonts/truetype/sinhala/lklug.ttf
+2018-03-20 03:06:25,717 DEBUG trying fontname /usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+2018-03-20 03:06:25,717 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Norasi-Bold.ttf
+2018-03-20 03:06:25,717 DEBUG trying fontname /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+2018-03-20 03:06:25,717 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Kinnari-BoldItalic.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgMono-BoldOblique.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstTitle.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Kinnari.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXSizeTwoSym-Bold.otf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Bold.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/kacst/mry_KacstQurn.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/TlwgTypo.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Loma-Oblique.ttf
+2018-03-20 03:06:25,718 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXNonUnicode-Bold.otf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Umpush.ttf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXGeneral-Regular.otf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/truetype/kacst/KacstTitleL.ttf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/truetype/padauk/Padauk.ttf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/truetype/nanum/NanumGothic.ttf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/opentype/stix-word/STIX-Bold.otf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Italic.ttf
+2018-03-20 03:06:25,719 DEBUG trying fontname /usr/share/fonts/truetype/ttf-khmeros-core/KhmerOSsys.ttf
+2018-03-20 03:06:25,720 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Purisa-Oblique.ttf
+2018-03-20 03:06:25,720 DEBUG trying fontname /usr/share/fonts/truetype/tlwg/Waree-Oblique.ttf
+2018-03-20 03:06:25,721 DEBUG trying fontname /usr/share/fonts/opentype/stix/STIXGeneral-BoldItalic.otf
+2018-03-20 03:06:25,721 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf
+2018-03-20 03:06:25,736 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf
+2018-03-20 03:06:25,736 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf
+2018-03-20 03:06:25,737 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf
+2018-03-20 03:06:25,737 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf
+2018-03-20 03:06:25,738 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf
+2018-03-20 03:06:25,738 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf
+2018-03-20 03:06:25,738 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf
+2018-03-20 03:06:25,739 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf
+2018-03-20 03:06:25,739 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf
+2018-03-20 03:06:25,739 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf
+2018-03-20 03:06:25,744 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf
+2018-03-20 03:06:25,744 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf
+2018-03-20 03:06:25,745 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
+2018-03-20 03:06:25,745 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf
+2018-03-20 03:06:25,745 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf
+2018-03-20 03:06:25,746 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf
+2018-03-20 03:06:25,747 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf
+2018-03-20 03:06:25,747 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf
+2018-03-20 03:06:25,747 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf
+2018-03-20 03:06:25,748 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf
+2018-03-20 03:06:25,748 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf
+2018-03-20 03:06:25,752 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf
+2018-03-20 03:06:25,752 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf
+2018-03-20 03:06:25,752 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf
+2018-03-20 03:06:25,753 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf
+2018-03-20 03:06:25,753 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf
+2018-03-20 03:06:25,753 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf
+2018-03-20 03:06:25,754 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf
+2018-03-20 03:06:25,754 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf
+2018-03-20 03:06:25,754 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf
+2018-03-20 03:06:25,755 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf
+2018-03-20 03:06:25,755 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf
+2018-03-20 03:06:25,755 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf
+2018-03-20 03:06:25,757 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf
+2018-03-20 03:06:25,757 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf
+2018-03-20 03:06:25,760 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf
+2018-03-20 03:06:25,760 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf
+2018-03-20 03:06:25,760 DEBUG createFontDict: /usr/share/fonts/truetype/fonts-guru-extra/Saab.ttf
+2018-03-20 03:06:25,769 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
+2018-03-20 03:06:25,769 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Sawasdee-Oblique.ttf
+2018-03-20 03:06:25,792 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Sawasdee-BoldOblique.ttf
+2018-03-20 03:06:25,794 DEBUG createFontDict: /usr/share/fonts/truetype/kacst-one/KacstOne-Bold.ttf
+2018-03-20 03:06:25,802 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsD-Bold.otf
+2018-03-20 03:06:25,825 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+2018-03-20 03:06:25,893 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+2018-03-20 03:06:25,946 DEBUG createFontDict: /usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+2018-03-20 03:06:26,003 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeTwoSym-Regular.otf
+2018-03-20 03:06:26,019 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeFourSym-Bold.otf
+2018-03-20 03:06:26,020 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypewriter.ttf
+2018-03-20 03:06:26,038 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Garuda-Bold.ttf
+2018-03-20 03:06:26,062 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsSm-Bold.otf
+2018-03-20 03:06:26,080 DEBUG createFontDict: /usr/share/fonts/truetype/padauk/Padauk-book.ttf
+2018-03-20 03:06:26,141 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstLetter.ttf
+2018-03-20 03:06:26,171 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeOneSym-Bold.otf
+2018-03-20 03:06:26,172 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Laksaman-BoldItalic.ttf
+2018-03-20 03:06:26,191 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+2018-03-20 03:06:26,211 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXGeneral-Italic.otf
+2018-03-20 03:06:26,233 DEBUG createFontDict: /usr/share/fonts/opentype/stix-word/STIXMath-Regular.otf
+2018-03-20 03:06:26,246 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Loma-Bold.ttf
+2018-03-20 03:06:26,282 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-M.ttf
+2018-03-20 03:06:26,282 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypist-Oblique.ttf
+2018-03-20 03:06:26,306 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf
+2018-03-20 03:06:26,359 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstNaskh.ttf
+2018-03-20 03:06:26,370 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsUp-Bold.otf
+2018-03-20 03:06:26,371 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-R.ttf
+2018-03-20 03:06:26,372 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf
+2018-03-20 03:06:26,393 DEBUG createFontDict: /usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf
+2018-03-20 03:06:26,427 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+2018-03-20 03:06:26,461 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Umpush-Bold.ttf
+2018-03-20 03:06:26,483 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstDigital.ttf
+2018-03-20 03:06:26,484 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypewriter-Bold.ttf
+2018-03-20 03:06:26,502 DEBUG createFontDict: /usr/share/fonts/truetype/nanum/NanumBarunGothicBold.ttf
+2018-03-20 03:06:26,538 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-C.ttf
+2018-03-20 03:06:26,568 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-B.ttf
+2018-03-20 03:06:26,569 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstArt.ttf
+2018-03-20 03:06:26,580 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstOffice.ttf
+2018-03-20 03:06:26,597 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstPen.ttf
+2018-03-20 03:06:26,598 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Laksaman-Bold.ttf
+2018-03-20 03:06:26,600 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSans.ttf
+2018-03-20 03:06:26,617 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Garuda.ttf
+2018-03-20 03:06:26,662 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Norasi-Oblique.ttf
+2018-03-20 03:06:26,683 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Kinnari-BoldOblique.ttf
+2018-03-20 03:06:26,709 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-BoldItalic.ttf
+2018-03-20 03:06:26,726 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Waree-BoldOblique.ttf
+2018-03-20 03:06:26,742 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgMono.ttf
+2018-03-20 03:06:26,743 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Sawasdee-Bold.ttf
+2018-03-20 03:06:26,745 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXGeneral-Bold.otf
+2018-03-20 03:06:26,764 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeThreeSym-Bold.otf
+2018-03-20 03:06:26,766 DEBUG createFontDict: /usr/share/fonts/opentype/stix-word/STIX-BoldItalic.otf
+2018-03-20 03:06:26,781 DEBUG createFontDict: /usr/share/fonts/truetype/takao-gothic/TakaoPGothic.ttf
+2018-03-20 03:06:26,782 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Regular.ttf
+2018-03-20 03:06:26,804 DEBUG createFontDict: /usr/share/fonts/truetype/lao/Phetsarath_OT.ttf
+2018-03-20 03:06:26,825 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXVariants-Bold.otf
+2018-03-20 03:06:26,827 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXNonUnicode-Regular.otf
+2018-03-20 03:06:26,828 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Kinnari-Bold.ttf
+2018-03-20 03:06:26,830 DEBUG createFontDict: /usr/share/fonts/opentype/stix-word/STIX-Regular.otf
+2018-03-20 03:06:26,853 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeMono.ttf
+2018-03-20 03:06:26,883 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-MI.ttf
+2018-03-20 03:06:26,905 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Garuda-Oblique.ttf
+2018-03-20 03:06:26,907 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Norasi.ttf
+2018-03-20 03:06:26,928 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf
+2018-03-20 03:06:26,929 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeThreeSym-Regular.otf
+2018-03-20 03:06:26,930 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-LI.ttf
+2018-03-20 03:06:26,970 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Umpush-LightOblique.ttf
+2018-03-20 03:06:26,993 DEBUG createFontDict: /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+2018-03-20 03:06:26,994 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstPoster.ttf
+2018-03-20 03:06:27,010 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+2018-03-20 03:06:27,032 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypo-Bold.ttf
+2018-03-20 03:06:27,045 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypo-Oblique.ttf
+2018-03-20 03:06:27,056 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypist-BoldOblique.ttf
+2018-03-20 03:06:27,059 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsSm-Regular.otf
+2018-03-20 03:06:27,060 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypist.ttf
+2018-03-20 03:06:27,063 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Purisa-Bold.ttf
+2018-03-20 03:06:27,086 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Sawasdee.ttf
+2018-03-20 03:06:27,094 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Norasi-Italic.ttf
+2018-03-20 03:06:27,102 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsUpD-Bold.otf
+2018-03-20 03:06:27,116 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsD-Regular.otf
+2018-03-20 03:06:27,118 DEBUG createFontDict: /usr/share/fonts/truetype/lohit-punjabi/Lohit-Punjabi.ttf
+2018-03-20 03:06:27,121 DEBUG createFontDict: /usr/share/fonts/truetype/nanum/NanumGothicBold.ttf
+2018-03-20 03:06:27,155 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Kinnari-Italic.ttf
+2018-03-20 03:06:27,158 DEBUG createFontDict: /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+2018-03-20 03:06:27,158 DEBUG createFontDict: /usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf
+2018-03-20 03:06:27,195 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstQurn.ttf
+2018-03-20 03:06:27,197 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+2018-03-20 03:06:27,199 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf
+2018-03-20 03:06:27,221 DEBUG createFontDict: /usr/share/fonts/opentype/stix-word/STIX-Italic.otf
+2018-03-20 03:06:27,238 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeOneSym-Regular.otf
+2018-03-20 03:06:27,239 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
+2018-03-20 03:06:27,239 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-RI.ttf
+2018-03-20 03:06:27,240 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf
+2018-03-20 03:06:27,243 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Kinnari-Oblique.ttf
+2018-03-20 03:06:27,245 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstDecorative.ttf
+2018-03-20 03:06:27,247 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Waree-Bold.ttf
+2018-03-20 03:06:27,272 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-B.ttf
+2018-03-20 03:06:27,273 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXVariants-Regular.otf
+2018-03-20 03:06:27,274 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Purisa.ttf
+2018-03-20 03:06:27,277 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXNonUnicode-BoldItalic.otf
+2018-03-20 03:06:27,305 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf
+2018-03-20 03:06:27,318 DEBUG createFontDict: /usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+2018-03-20 03:06:27,318 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+2018-03-20 03:06:27,341 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeFourSym-Regular.otf
+2018-03-20 03:06:27,343 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstFarsi.ttf
+2018-03-20 03:06:27,344 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-BI.ttf
+2018-03-20 03:06:27,345 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstBook.ttf
+2018-03-20 03:06:27,346 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsUp-Regular.otf
+2018-03-20 03:06:27,347 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Norasi-BoldOblique.ttf
+2018-03-20 03:06:27,348 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Loma-BoldOblique.ttf
+2018-03-20 03:06:27,366 DEBUG createFontDict: /usr/share/fonts/truetype/kacst-one/KacstOne.ttf
+2018-03-20 03:06:27,367 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Laksaman.ttf
+2018-03-20 03:06:27,369 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-L.ttf
+2018-03-20 03:06:27,370 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXNonUnicode-Italic.otf
+2018-03-20 03:06:27,371 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypewriter-BoldOblique.ttf
+2018-03-20 03:06:27,372 DEBUG createFontDict: /usr/share/fonts/truetype/padauk/Padauk-bold.ttf
+2018-03-20 03:06:27,399 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypewriter-Oblique.ttf
+2018-03-20 03:06:27,401 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Umpush-BoldOblique.ttf
+2018-03-20 03:06:27,403 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Laksaman-Italic.ttf
+2018-03-20 03:06:27,405 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Umpush-Light.ttf
+2018-03-20 03:06:27,406 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeFiveSym-Regular.otf
+2018-03-20 03:06:27,407 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-BI.ttf
+2018-03-20 03:06:27,407 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Waree.ttf
+2018-03-20 03:06:27,422 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgMono-Oblique.ttf
+2018-03-20 03:06:27,442 DEBUG createFontDict: /usr/share/fonts/truetype/openoffice/opens___.ttf
+2018-03-20 03:06:27,468 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgMono-Bold.ttf
+2018-03-20 03:06:27,469 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Loma.ttf
+2018-03-20 03:06:27,488 DEBUG createFontDict: /usr/share/fonts/truetype/tibetan-machine/TibetanMachineUni.ttf
+2018-03-20 03:06:27,511 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
+2018-03-20 03:06:27,512 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsUpD-Regular.otf
+2018-03-20 03:06:27,513 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf
+2018-03-20 03:06:27,513 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Umpush-Oblique.ttf
+2018-03-20 03:06:27,528 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf
+2018-03-20 03:06:27,528 DEBUG createFontDict: /usr/share/fonts/truetype/ancient-scripts/Symbola_hint.ttf
+2018-03-20 03:06:27,570 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstScreen.ttf
+2018-03-20 03:06:27,572 DEBUG createFontDict: /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+2018-03-20 03:06:27,572 DEBUG createFontDict: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+2018-03-20 03:06:27,572 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+2018-03-20 03:06:27,576 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypist-Bold.ttf
+2018-03-20 03:06:27,578 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Garuda-BoldOblique.ttf
+2018-03-20 03:06:27,579 DEBUG createFontDict: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-RI.ttf
+2018-03-20 03:06:27,580 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsUpSm-Bold.otf
+2018-03-20 03:06:27,581 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+2018-03-20 03:06:27,585 DEBUG createFontDict: /usr/share/fonts/truetype/ttf-khmeros-core/KhmerOS.ttf
+2018-03-20 03:06:27,613 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypo-BoldOblique.ttf
+2018-03-20 03:06:27,614 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXIntegralsUpSm-Regular.otf
+2018-03-20 03:06:27,615 DEBUG createFontDict: /usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf
+2018-03-20 03:06:27,676 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Purisa-BoldOblique.ttf
+2018-03-20 03:06:27,690 DEBUG createFontDict: /usr/share/fonts/truetype/abyssinica/AbyssinicaSIL-R.ttf
+2018-03-20 03:06:27,710 DEBUG createFontDict: /usr/share/fonts/truetype/padauk/Padauk-bookbold.ttf
+2018-03-20 03:06:27,713 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
+2018-03-20 03:06:27,713 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Norasi-BoldItalic.ttf
+2018-03-20 03:06:27,715 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeSerif.ttf
+2018-03-20 03:06:27,716 DEBUG createFontDict: /usr/share/fonts/truetype/sinhala/lklug.ttf
+2018-03-20 03:06:27,718 DEBUG createFontDict: /usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+2018-03-20 03:06:27,721 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Norasi-Bold.ttf
+2018-03-20 03:06:27,722 DEBUG createFontDict: /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+2018-03-20 03:06:27,722 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Kinnari-BoldItalic.ttf
+2018-03-20 03:06:27,724 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgMono-BoldOblique.ttf
+2018-03-20 03:06:27,727 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstTitle.ttf
+2018-03-20 03:06:27,744 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Kinnari.ttf
+2018-03-20 03:06:27,746 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXSizeTwoSym-Bold.otf
+2018-03-20 03:06:27,747 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Bold.ttf
+2018-03-20 03:06:27,770 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/mry_KacstQurn.ttf
+2018-03-20 03:06:27,773 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/TlwgTypo.ttf
+2018-03-20 03:06:27,774 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Loma-Oblique.ttf
+2018-03-20 03:06:27,776 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXNonUnicode-Bold.otf
+2018-03-20 03:06:27,777 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Umpush.ttf
+2018-03-20 03:06:27,796 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXGeneral-Regular.otf
+2018-03-20 03:06:27,803 DEBUG createFontDict: /usr/share/fonts/truetype/kacst/KacstTitleL.ttf
+2018-03-20 03:06:27,807 DEBUG createFontDict: /usr/share/fonts/truetype/padauk/Padauk.ttf
+2018-03-20 03:06:27,813 DEBUG createFontDict: /usr/share/fonts/truetype/nanum/NanumGothic.ttf
+2018-03-20 03:06:27,816 DEBUG createFontDict: /usr/share/fonts/opentype/stix-word/STIX-Bold.otf
+2018-03-20 03:06:27,832 DEBUG createFontDict: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Italic.ttf
+2018-03-20 03:06:27,834 DEBUG createFontDict: /usr/share/fonts/truetype/ttf-khmeros-core/KhmerOSsys.ttf
+2018-03-20 03:06:27,876 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Purisa-Oblique.ttf
+2018-03-20 03:06:27,878 DEBUG createFontDict: /usr/share/fonts/truetype/tlwg/Waree-Oblique.ttf
+2018-03-20 03:06:27,880 DEBUG createFontDict: /usr/share/fonts/opentype/stix/STIXGeneral-BoldItalic.otf
+2018-03-20 03:06:27,940 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvb8an.afm
+2018-03-20 03:06:27,957 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/putb8a.afm
+2018-03-20 03:06:27,974 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/ptmb8a.afm
+2018-03-20 03:06:27,986 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pagdo8a.afm
+2018-03-20 03:06:27,997 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-Bold.afm
+2018-03-20 03:06:28,038 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Times-Roman.afm
+2018-03-20 03:06:28,077 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Symbol.afm
+2018-03-20 03:06:28,087 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pcrb8a.afm
+2018-03-20 03:06:28,103 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/putbi8a.afm
+2018-03-20 03:06:28,121 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pbkli8a.afm
+2018-03-20 03:06:28,130 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pplr8a.afm
+2018-03-20 03:06:28,148 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvl8a.afm
+2018-03-20 03:06:28,162 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pncr8a.afm
+2018-03-20 03:06:28,177 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Courier.afm
+2018-03-20 03:06:28,186 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvbo8a.afm
+2018-03-20 03:06:28,205 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pagd8a.afm
+2018-03-20 03:06:28,214 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pplb8a.afm
+2018-03-20 03:06:28,223 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/cmex10.afm
+2018-03-20 03:06:28,245 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/cmr10.afm
+2018-03-20 03:06:28,248 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/psyr.afm
+2018-03-20 03:06:28,256 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pagko8a.afm
+2018-03-20 03:06:28,266 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pncri8a.afm
+2018-03-20 03:06:28,283 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvr8a.afm
+2018-03-20 03:06:28,296 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-BoldOblique.afm
+2018-03-20 03:06:28,338 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvr8an.afm
+2018-03-20 03:06:28,357 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pzcmi8a.afm
+2018-03-20 03:06:28,376 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvro8an.afm
+2018-03-20 03:06:28,382 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvb8a.afm
+2018-03-20 03:06:28,403 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pncbi8a.afm
+2018-03-20 03:06:28,413 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvro8a.afm
+2018-03-20 03:06:28,423 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Courier-BoldOblique.afm
+2018-03-20 03:06:28,448 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pbkd8a.afm
+2018-03-20 03:06:28,453 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pagk8a.afm
+2018-03-20 03:06:28,474 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pbkdi8a.afm
+2018-03-20 03:06:28,483 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvlo8a.afm
+2018-03-20 03:06:28,497 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pplbi8a.afm
+2018-03-20 03:06:28,514 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/phvbo8an.afm
+2018-03-20 03:06:28,528 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/ptmri8a.afm
+2018-03-20 03:06:28,542 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/putr8a.afm
+2018-03-20 03:06:28,555 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pcrr8a.afm
+2018-03-20 03:06:28,568 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/cmtt10.afm
+2018-03-20 03:06:28,584 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/ptmbi8a.afm
+2018-03-20 03:06:28,594 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/cmsy10.afm
+2018-03-20 03:06:28,602 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pzdr.afm
+2018-03-20 03:06:28,617 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Times-BoldItalic.afm
+2018-03-20 03:06:28,648 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Times-Bold.afm
+2018-03-20 03:06:28,687 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-Oblique.afm
+2018-03-20 03:06:28,729 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Times-Italic.afm
+2018-03-20 03:06:28,766 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/ptmr8a.afm
+2018-03-20 03:06:28,783 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pcrbo8a.afm
+2018-03-20 03:06:28,800 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Courier-Bold.afm
+2018-03-20 03:06:28,815 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pbkl8a.afm
+2018-03-20 03:06:28,823 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica.afm
+2018-03-20 03:06:28,867 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pcrro8a.afm
+2018-03-20 03:06:28,882 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pncb8a.afm
+2018-03-20 03:06:28,900 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/pplri8a.afm
+2018-03-20 03:06:28,918 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/Courier-Oblique.afm
+2018-03-20 03:06:28,929 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/cmmi10.afm
+2018-03-20 03:06:28,939 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts/ZapfDingbats.afm
+2018-03-20 03:06:28,955 DEBUG createFontDict: /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/afm/putri8a.afm
+2018-03-20 03:06:28,967 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n021003l.afm
+2018-03-20 03:06:29,192 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/c059033l.afm
+2018-03-20 03:06:29,280 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/b018012l.afm
+2018-03-20 03:06:29,335 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0582bt_.afm
+2018-03-20 03:06:29,362 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/c059036l.afm
+2018-03-20 03:06:29,390 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n021004l.afm
+2018-03-20 03:06:29,428 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n021023l.afm
+2018-03-20 03:06:29,455 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/a010013l.afm
+2018-03-20 03:06:29,499 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019044l.afm
+2018-03-20 03:06:29,562 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019063l.afm
+2018-03-20 03:06:29,595 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019043l.afm
+2018-03-20 03:06:29,628 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019004l.afm
+2018-03-20 03:06:29,666 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/p052003l.afm
+2018-03-20 03:06:29,701 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019024l.afm
+2018-03-20 03:06:29,731 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/d050000l.afm
+2018-03-20 03:06:29,763 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n022024l.afm
+2018-03-20 03:06:29,793 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019064l.afm
+2018-03-20 03:06:29,866 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/b018032l.afm
+2018-03-20 03:06:29,900 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0648bt_.afm
+2018-03-20 03:06:29,919 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019023l.afm
+2018-03-20 03:06:29,952 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n019003l.afm
+2018-03-20 03:06:29,992 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0611bt_.afm
+2018-03-20 03:06:30,001 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/p052024l.afm
+2018-03-20 03:06:30,034 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/a010015l.afm
+2018-03-20 03:06:30,074 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n022004l.afm
+2018-03-20 03:06:30,114 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/p052023l.afm
+2018-03-20 03:06:30,143 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/a010033l.afm
+2018-03-20 03:06:30,178 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/p052004l.afm
+2018-03-20 03:06:30,210 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0649bt_.afm
+2018-03-20 03:06:30,228 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/a010035l.afm
+2018-03-20 03:06:30,262 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n022023l.afm
+2018-03-20 03:06:30,300 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/b018015l.afm
+2018-03-20 03:06:30,346 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0583bt_.afm
+2018-03-20 03:06:30,357 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/c059016l.afm
+2018-03-20 03:06:30,388 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n022003l.afm
+2018-03-20 03:06:30,433 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/n021024l.afm
+2018-03-20 03:06:30,455 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/z003034l.afm
+2018-03-20 03:06:30,489 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0419bt_.afm
+2018-03-20 03:06:30,509 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0633bt_.afm
+2018-03-20 03:06:30,542 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/c059013l.afm
+2018-03-20 03:06:30,576 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/b018035l.afm
+2018-03-20 03:06:30,611 DEBUG createFontDict: /usr/share/fonts/type1/gsfonts/s050000l.afm
+2018-03-20 03:06:30,622 DEBUG createFontDict: /usr/share/fonts/X11/Type1/c0632bt_.afm
+2018-03-20 03:06:30,675 INFO generated new fontManager
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/tkinter/__init__.py", line 36, in <module>
+    import _tkinter
+ImportError: No module named '_tkinter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    from modules.file_utils import *;
+  File "/home/license/license/liplate/modules/file_utils.py", line 3, in <module>
+    from modules.Plate import *;
+  File "/home/license/license/liplate/modules/Plate.py", line 7, in <module>
+    from matplotlib import pyplot as plt;
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/pyplot.py", line 115, in <module>
+    _backend_mod, new_figure_manager, draw_if_interactive, _show = pylab_setup()
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/backends/__init__.py", line 62, in pylab_setup
+    [backend_name], 0)
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/backends/backend_tkagg.py", line 4, in <module>
+    from . import tkagg  # Paint image to Tk photo blitter extension.
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/backends/tkagg.py", line 5, in <module>
+    from six.moves import tkinter as Tk
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/six.py", line 92, in __get__
+    result = self._resolve()
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/six.py", line 115, in _resolve
+    return _import_module(self.mod)
+  File "/home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/six.py", line 82, in _import_module
+    __import__(name)
+  File "/usr/lib/python3.5/tkinter/__init__.py", line 38, in <module>
+    raise ImportError(str(msg) + ', please install the python3-tk package')
+ImportError: No module named '_tkinter', please install the python3-tk package
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ pip install python3-tk
+Collecting python3-tk
+  Could not find a version that satisfies the requirement python3-tk (from versions: )
+No matching distribution found for python3-tk
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ python
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import Tkinter
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named 'Tkinter'
+>>> 
+[1]+  Stopped                 python
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ sudo apt-get install python3-tk
+[sudo] password for license: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  blt tk8.6-blt2.5
+Suggested packages:
+  blt-demo tix python3-tk-dbg
+The following NEW packages will be installed:
+  blt python3-tk tk8.6-blt2.5
+0 upgraded, 3 newly installed, 0 to remove and 13 not upgraded.
+Need to get 604 kB of archives.
+After this operation, 2,117 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:2 http://ph.archive.ubuntu.com/ubuntu xenial/main amd64 blt amd64 2.5.3+dfsg-3 [4,852 B]
+Get:1 http://122.2.223.74:80/data/063f81ab76c37301/ph.archive.ubuntu.com/ubuntu xenial/main amd64 tk8.6-blt2.5 amd64 2.5.3+dfsg-3 [574 kB]
+Get:3 http://122.2.223.74:80/data/063fa0abaac308b0/ph.archive.ubuntu.com/ubuntu xenial/main amd64 python3-tk amd64 3.5.1-1 [25.1 kB]
+Fetched 604 kB in 3s (159 kB/s)  
+Selecting previously unselected package tk8.6-blt2.5.
+(Reading database ... 182875 files and directories currently installed.)
+Preparing to unpack .../tk8.6-blt2.5_2.5.3+dfsg-3_amd64.deb ...
+Unpacking tk8.6-blt2.5 (2.5.3+dfsg-3) ...
+Selecting previously unselected package blt.
+Preparing to unpack .../blt_2.5.3+dfsg-3_amd64.deb ...
+Unpacking blt (2.5.3+dfsg-3) ...
+Selecting previously unselected package python3-tk.
+Preparing to unpack .../python3-tk_3.5.1-1_amd64.deb ...
+Unpacking python3-tk (3.5.1-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up tk8.6-blt2.5 (2.5.3+dfsg-3) ...
+Setting up blt (2.5.3+dfsg-3) ...
+Setting up python3-tk (3.5.1-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(liplate-venv) license@license-VirtualBox:~/license/liplate$ python main.py2018-03-20 03:10:36,530 DEBUG $HOME=/home/license
+2018-03-20 03:10:36,531 DEBUG matplotlib data path /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data
+2018-03-20 03:10:36,536 DEBUG loaded rc file /home/license/license/liplate/liplate-venv/lib/python3.5/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-03-20 03:10:36,538 DEBUG matplotlib version 2.2.2
+2018-03-20 03:10:36,538 DEBUG interactive is False
+2018-03-20 03:10:36,538 DEBUG platform is linux
+2018-03-20 03:10:36,539 DEBUG loaded modules: ['cv2.detail', '_compression', 'email.header', 'numpy.lib.twodim_base', 'pytesseract', 'numpy.lib.mixins', 'numpy.lib._iotools', 'importlib.util', 'importlib', 'uu', 'numpy.fft', 'os.path', 'numpy.lib.function_base', 'binascii', 'hashlib', '_locale', 'glob', 'numpy.core._internal', 'socketserver', 'pytesseract.pytesseract', '_io', 'time', '_weakref', 'encodings', 'numpy.matrixlib.defmatrix', 'numpy.lib.type_check', 'numpy.testing.nose_tools.nosetester', 'numpy.lib.ufunclike', 'numpy.ma.core', '_compat_pickle', 'numpy.polynomial.hermite_e', 'string', 'unittest', 'matplotlib.colors', 'numpy.matrixlib', 'cv2', 'email._policybase', 'ntpath', 'cv2.ocl', 'email.message', 'gettext', 'sre_parse', 'numpy.polynomial.polynomial', '_pickle', 'calendar', 'modules.file_utils', 'site', 'collections', '_codecs', 'cv2.videostab', '_signal', 'encodings.latin_1', '_ssl', '_functools', 'unittest.case', 'numpy.lib._datasource', '_opcode', 'email.parser', 'numpy.core.arrayprint', 'distutils.dep_util', 'ipaddress', 'encodings.aliases', 'collections.abc', 'numbers', '_collections_abc', 'ctypes', 'encodings.utf_8', 'http', 'numpy.testing.decorators', '_string', 'distutils.log', 'distutils.dist', 'numpy.polynomial._polybase', 'numpy.core._methods', 'numpy.linalg', 'matplotlib.cbook', 'urllib.error', '_stat', '__future__', 'matplotlib._color_data', 'os', '_weakrefset', 'pprint', 'numpy.polynomial.chebyshev', 'dis', 'getopt', 'email.iterators', 'zlib', 'numpy.lib.arrayterator', 'numpy.testing.nose_tools.utils', 'modules.Plate', 'numpy.testing.nose_tools', 'heapq', 'io', 'numpy.version', 're', 'argparse', 'numpy.fft.info', 'errno', 'email.feedparser', 'mpl_toolkits', 'dateutil._version', 'numpy.core.getlimits', 'struct', 'zipimport', 'PIL.version', 'functools', 'pathlib', 'numpy.random.mtrand', 'shutil', 'numpy.random', 'contextlib', 'sys', 'cv2.cv2', 'shlex', 'email._encoded_words', 'unittest.loader', 'matplotlib.testing', 'numpy.core.memmap', 'six', 'numpy.testing', 'types', 'numpy.lib.info', 'email._parseaddr', 'numpy.core.numeric', 'cv2.ipp', 'matplotlib.compat.subprocess', 'dateutil', 'numpy.core.shape_base', 'cv2.ogl', 'numpy.ctypeslib', 'abc', 'email.errors', 'pyparsing', 'token', 'locale', 'importlib._bootstrap_external', 'numpy.fft.helper', 'pwd', 'numpy.polynomial.laguerre', 'PIL.ImageMode', '_thread', 'numpy.core.numerictypes', 'matplotlib.cbook.deprecation', 'itertools', 'sitecustomize', '_struct', 'ctypes._endian', 'quopri', 'cv2.data', 'numpy.polynomial.hermite', 'numpy.random.info', 'numpy.core.defchararray', 'numpy.polynomial', 'copy', 'http.client', 'email.encoders', 'numpy._import_tools', 'urllib', 'logging.handlers', 'numpy.linalg.lapack_lite', 'gzip', 'matplotlib._version', 'cython_runtime', 'numpy.core.fromnumeric', 'distutils.util', 'numpy.lib.index_tricks', 'ast', 'distutils.spawn', '_heapq', 'numpy.testing.nose_tools.decorators', 'json.encoder', 'urllib.request', 'numpy.compat', 'unittest.util', 'tokenize', '_frozen_importlib', 'PIL.Image', 'numpy.compat._inspect', 'grp', 'email.base64mime', 'email.utils', '_sre', 'numpy.compat.py3k', 'numpy.lib', 'numpy.linalg._umath_linalg', 'copyreg', 'numpy.add_newdocs', 'genericpath', 'operator', 'unittest.main', 'matplotlib.compat', 'ssl', 'sre_compile', 'imp', 'codecs', 'cv2.fisheye', 'matplotlib.cbook._backports', '_virtualenv_distutils', '_imp', '_random', '_collections', 'difflib', 'warnings', 'numpy.testing.utils', 'modules', 'stat', 'base64', '_bz2', 'distutils.fancy_getopt', 'matplotlib', 'signal', 'matplotlib.fontconfig_pattern', 'numpy.core.umath', 'numpy.__config__', 'numpy.core', 'unittest.runner', 'matplotlib.rcsetup', 'cv2.ml', 'pkgutil', 'json.scanner', 'math', 'PIL', 'cv2.instr', 'logging', 'numpy.lib.arraysetops', 'socket', 'numpy.polynomial.polyutils', 'posixpath', 'unittest.suite', 'traceback', 'importlib.machinery', 'numpy.core.multiarray', 'json', 'queue', '_ast', '_hashlib', '_lzma', 'datetime', 'logging.config', 'numpy.fft.fftpack_lite', 'marshal', 'six.moves.urllib', 'numpy.lib.utils', 'lzma', 'bz2', 'weakref', 'urllib.parse', 'numpy.linalg.linalg', 'PIL._binary', 'bisect', 'numpy.lib.polynomial', 'numpy.testing.nosetester', 'select', '_json', 'tempfile', 'numpy.core.einsumfunc', '__main__', 'tarfile', 'selectors', 'keyword', 'decimal', 'opcode', 'numpy.core.records', 'cv2.Error', 'numpy.core.machar', 'numpy._distributor_init', 'email.quoprimime', 'distutils.sysconfig', 'builtins', '_decimal', 'unittest.signals', 'numpy.fft.fftpack', 'linecache', 'numpy.lib.format', 'mtrand', 'numpy.lib.shape_base', '_warnings', 'numpy.lib.arraypad', 'numpy.linalg.info', '_posixsubprocess', 'random', 'unittest.result', '_datetime', '_frozen_importlib_external', 'posix', 'cv2.flann', 'numpy._globals', 'numpy.core.function_base', '_bisect', 'numpy.lib.scimath', 'threading', 'six.moves.urllib.request', 'numpy.lib.npyio', '_ctypes', 'importlib._bootstrap', 'pickle', 'six.moves', 'email', 'cycler', 'atexit', 'distutils.debug', 'enum', 'configparser', 'sre_constants', 'numpy.lib.nanfunctions', 'distutils.errors', 'PIL._imaging', 'importlib.abc', 'fnmatch', 'numpy.core.info', '_operator', 'inspect', 'urllib.response', 'numpy', 'PIL._util', 'json.decoder', 'cv2.dnn', 'textwrap', 'reprlib', 'subprocess', 'numpy.lib.financial', 'numpy.ma', 'email.charset', 'numpy.polynomial.legendre', '_socket', '_bootlocale', 'numpy.lib._version', 'modules.TrainingCharacter', 'numpy.ma.extras', 'distutils', 'numpy.lib.stride_tricks', 'distutils.version']
+2018-03-20 03:10:36,642 DEBUG CACHEDIR=/home/license/.cache/matplotlib
+2018-03-20 03:10:36,651 DEBUG Using fontManager instance from /home/license/.cache/matplotlib/fontList.json
+2018-03-20 03:10:37,175 DEBUG backend TkAgg version unknown
+2018-03-20 03:10:37,224 INFO Loading image self-driving.jpeg...
+2018-03-20 03:10:37,280 INFO New plate created.
+2018-03-20 03:10:37,280 INFO Loading image self-driving.jpg...
+2018-03-20 03:10:37,401 INFO New plate created.
+2018-03-20 03:10:37,402 INFO Loading image 07ctsvcoupefd2011.jpg...
+2018-03-20 03:10:37,453 INFO New plate created.
+2018-03-20 03:10:37,453 INFO Loading image dodge-challenger.jpg...
+2018-03-20 03:10:37,523 INFO New plate created.
+2018-03-20 03:10:37,523 INFO Loading image chevy_truck.jpg...
+2018-03-20 03:10:37,594 INFO New plate created.
+2018-03-20 03:10:37,600 INFO Loading image classic_corvet.jpg...
+2018-03-20 03:10:37,705 INFO New plate created.
+2018-03-20 03:10:37,705 INFO Loading image 1950s-studebaker.jpg...
+2018-03-20 03:10:37,766 INFO New plate created.
+2018-03-20 03:10:37,766 INFO Loading image bmw.jpg...
+2018-03-20 03:10:37,920 INFO New plate created.
+2018-03-20 03:10:37,921 INFO Loading image dodge-charger.jpg...
+2018-03-20 03:10:37,942 INFO New plate created.
+2018-03-20 03:10:37,942 INFO Loading image 1950s-studebaker-classic.jpg...
+2018-03-20 03:10:37,991 INFO New plate created.
+2018-03-20 03:10:37,991 INFO Loading image police.jpg...
+2018-03-20 03:10:38,042 INFO New plate created.
+2018-03-20 03:10:38,042 INFO Loading image old-classic-american-car.jpg...
+2018-03-20 03:10:38,096 INFO New plate created.
+2018-03-20 03:10:38,100 INFO Loading image Black-2013-Cadillac-ATS-back-view.jpg...
+2018-03-20 03:10:38,147 INFO New plate created.
+2018-03-20 03:10:38,153 INFO Loading image chevrolet-corvair-convertible.jpg...
+2018-03-20 03:10:38,192 INFO New plate created.
+2018-03-20 03:10:38,192 INFO Loading image classic-american-car.jpg...
+2018-03-20 03:10:38,237 INFO New plate created.
+2018-03-20 03:10:38,238 INFO Loading character 1.jpg...
+2018-03-20 03:10:38,250 INFO Training character object created for 1.jpg
+2018-03-20 03:10:38,250 INFO Loading character J.jpg...
+2018-03-20 03:10:38,269 INFO Training character object created for J.jpg
+2018-03-20 03:10:38,269 INFO Loading character Q.jpg...
+2018-03-20 03:10:38,270 INFO Training character object created for Q.jpg
+2018-03-20 03:10:38,270 INFO Loading character H.jpg...
+2018-03-20 03:10:38,291 INFO Training character object created for H.jpg
+2018-03-20 03:10:38,291 INFO Loading character E.jpg...
+2018-03-20 03:10:38,300 INFO Training character object created for E.jpg
+2018-03-20 03:10:38,300 INFO Loading character V.jpg...
+2018-03-20 03:10:38,302 INFO Training character object created for V.jpg
+2018-03-20 03:10:38,302 INFO Loading character N.jpg...
+2018-03-20 03:10:38,323 INFO Training character object created for N.jpg
+2018-03-20 03:10:38,323 INFO Loading character O.jpg...
+2018-03-20 03:10:38,324 INFO Training character object created for O.jpg
+2018-03-20 03:10:38,324 INFO Loading character B.jpg...
+2018-03-20 03:10:38,330 INFO Training character object created for B.jpg
+2018-03-20 03:10:38,330 INFO Loading character D.jpg...
+2018-03-20 03:10:38,345 INFO Training character object created for D.jpg
+2018-03-20 03:10:38,345 INFO Loading character U.jpg...
+2018-03-20 03:10:38,369 INFO Training character object created for U.jpg
+2018-03-20 03:10:38,369 INFO Loading character F.jpg...
+2018-03-20 03:10:38,390 INFO Training character object created for F.jpg
+2018-03-20 03:10:38,390 INFO Loading character 7.jpg...
+2018-03-20 03:10:38,418 INFO Training character object created for 7.jpg
+2018-03-20 03:10:38,418 INFO Loading character 2.jpg...
+2018-03-20 03:10:38,419 INFO Training character object created for 2.jpg
+2018-03-20 03:10:38,420 INFO Loading character T.jpg...
+2018-03-20 03:10:38,446 INFO Training character object created for T.jpg
+2018-03-20 03:10:38,446 INFO Loading character R.jpg...
+2018-03-20 03:10:38,447 INFO Training character object created for R.jpg
+2018-03-20 03:10:38,448 INFO Loading character K.jpg...
+2018-03-20 03:10:38,448 INFO Training character object created for K.jpg
+2018-03-20 03:10:38,449 INFO Loading character L.jpg...
+2018-03-20 03:10:38,460 INFO Training character object created for L.jpg
+2018-03-20 03:10:38,460 INFO Loading character 5.jpg...
+2018-03-20 03:10:38,481 INFO Training character object created for 5.jpg
+2018-03-20 03:10:38,482 INFO Loading character I.jpg...
+2018-03-20 03:10:38,513 INFO Training character object created for I.jpg
+2018-03-20 03:10:38,513 INFO Loading character A.jpg...
+2018-03-20 03:10:38,514 INFO Training character object created for A.jpg
+2018-03-20 03:10:38,514 INFO Loading character 3.jpg...
+2018-03-20 03:10:38,514 INFO Training character object created for 3.jpg
+2018-03-20 03:10:38,515 INFO Loading character W.jpg...
+2018-03-20 03:10:38,530 INFO Training character object created for W.jpg
+2018-03-20 03:10:38,530 INFO Loading character C.jpg...
+2018-03-20 03:10:38,544 INFO Training character object created for C.jpg
+2018-03-20 03:10:38,544 INFO Loading character M.jpg...
+2018-03-20 03:10:38,545 INFO Training character object created for M.jpg
+2018-03-20 03:10:38,545 INFO Loading character 6.jpg...
+2018-03-20 03:10:38,566 INFO Training character object created for 6.jpg
+2018-03-20 03:10:38,566 INFO Loading character S.jpg...
+2018-03-20 03:10:38,567 INFO Training character object created for S.jpg
+2018-03-20 03:10:38,567 INFO Loading character G.jpg...
+2018-03-20 03:10:38,569 INFO Training character object created for G.jpg
+2018-03-20 03:10:38,569 INFO Loading character X.jpg...
+2018-03-20 03:10:38,570 INFO Training character object created for X.jpg
+2018-03-20 03:10:38,570 INFO Loading character Y.jpg...
+2018-03-20 03:10:38,571 INFO Training character object created for Y.jpg
+2018-03-20 03:10:38,571 INFO Loading character 9.jpg...
+2018-03-20 03:10:38,572 INFO Training character object created for 9.jpg
+2018-03-20 03:10:38,572 INFO Loading character 8.jpg...
+2018-03-20 03:10:38,573 INFO Training character object created for 8.jpg
+2018-03-20 03:10:38,573 INFO Loading character P.jpg...
+2018-03-20 03:10:38,580 INFO Training character object created for P.jpg
+2018-03-20 03:10:38,580 INFO Loading character 0.jpg...
+2018-03-20 03:10:38,605 INFO Training character object created for 0.jpg
+2018-03-20 03:10:38,605 INFO Loading character Z.jpg...
+2018-03-20 03:10:38,624 INFO Training character object created for Z.jpg
+2018-03-20 03:10:38,624 INFO Loading character 4.jpg...
+2018-03-20 03:10:38,652 INFO Training character object created for 4.jpg
+2018-03-20 03:10:38,652 INFO All testing images and characters have been downloaded.
+2018-03-20 03:10:38,654 INFO Image converted to grayscale
+2018-03-20 03:10:38,755 INFO 36 potential plates found.
+2018-03-20 03:10:38,756 INFO Image converted to grayscale
+2018-03-20 03:10:38,757 INFO 11 contours found.
+2018-03-20 03:10:38,757 INFO 0 plate characters found
+2018-03-20 03:11:13,219 INFO Image converted to grayscale
+2018-03-20 03:11:13,391 INFO 0 potential plates found.
+2018-03-20 03:11:27,671 INFO Image converted to grayscale
+2018-03-20 03:11:27,792 INFO 0 potential plates found.
+2018-03-20 03:11:34,579 INFO Image converted to grayscale
+2018-03-20 03:11:34,776 INFO 0 potential plates found.
+2018-03-20 03:11:38,614 INFO Image converted to grayscale
+2018-03-20 03:11:39,008 INFO 3194 potential plates found.
+2018-03-20 03:11:39,010 INFO Image converted to grayscale
+2018-03-20 03:11:39,010 INFO 25 contours found.
+2018-03-20 03:11:39,011 INFO 22 plate characters found
